@@ -10,6 +10,19 @@ angular.module('myApp.routes',[])
             .state('web', {
                 url: '',
                 abstract: true
+            })
+
+            .state('web.view1', {
+                url: '/',
+                views: {
+                    'cars@': {
+                        controller: 'View1Ctrl',
+                        templateUrl: 'views/view1/view1.html',
+
+                    }
+
+                }
+
             });
 
         $urlRouterProvider.otherwise('/');

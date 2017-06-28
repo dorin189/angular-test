@@ -5,6 +5,6 @@
 
 angular.module('myApp.view3', [])
 
-    .controller('MainCtrl', function($scope) {
+    .controller('MainCtrl2', function($scope) {
         $scope.dorin = "Dorin";
     });

@@ -6,6 +6,12 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.view3',
-   'ngMaterial'
+  'ngCookies',
+  'pascalprecht.translate',
+  'myApp.i18n',
+  'myApp.cars',
+    'ngMaterial',
+    'myApp.routes',
+    'heroApp',
 ]);
 

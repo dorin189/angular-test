@@ -18,22 +18,15 @@
 </head>
 
 <body>
-  <!--<ul class="menu">-->
-    <!--<li><a href="#!/view1">view1</a></li>-->
-    <!--<li><a href="#!/view2">view2</a></li>-->
-  <!--</ul>-->
-  <md-button class="md-raised md-primary">Primary</md-button>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<hero-detail></hero-detail>
+<h3 layout-padding>{{'HEADLINE' | translate}}</h3>
+  <div ng-controller="View1Ctrl">
+    <div ui-view="cars">
 
-  <!--<div ng-view></div>-->
-  <div ng-controller="MainCtrl">
-    <div ui-view></div>
+    </div>
 
   </div>
-  <div>Angular seed app: v<span app-version></span></div>
 
 
   <script src="bower_components/angular/angular.js"></script>
@@ -42,9 +35,24 @@
   <script src="bower_components/angular-material/angular-material.min.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.15.2/angular-translate.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-interpolation-messageformat/2.15.2/angular-translate-interpolation-messageformat.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-cookie/2.15.2/angular-translate-storage-cookie.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-local/2.15.2/angular-translate-storage-local.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-url/2.15.2/angular-translate-loader-url.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-static-files/2.15.2/angular-translate-loader-static-files.js"></script>
+<script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-handler-log/2.15.2/angular-translate-handler-log.js"></script>
+
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="view3/view3.js"></script>
+  <script src="app-routes.js"></script>
+  <script src="views/view1/view1.js"></script>
+  <script src="views/view2/view2.js"></script>
+  <script src="views/view3/view3.js"></script>
+  <script src="app-i18n.js"></script>
+  <script src="components/language/language.js"></script>
+<script src="services/cars-model.js"></script>
 </body>
 </html>
