@@ -1,0 +1,26 @@
+<div>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="50" layout="column">
+            <md-card ng-repeat="car in viewCtrl.cars">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{car.title}}</span>
+                        <span class="md-subhead">{{'Price'| translate}} : {{car.price}} EUR</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-lg card-media" style="width: 230px;">
+                            <img ng-src="{{car.img}}">
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+
+                <div class="md-padding"><a href="{{car.wiki}}" target="_blank">{{'Wiki url' | translate}} : {{car.wiki}}</a></div>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button style="color: darkgoldenrod" ng-click="viewMore(car.id)">{{'View more' | translate}}</md-button>
+                    <md-button class="md-accent" ng-click="removeItem(car)">{{'Delete' | translate}}</md-button>
+                </md-card-actions>
+
+            </md-card>
+        </div>
+    </md-content>
+</div>

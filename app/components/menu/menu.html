@@ -1,7 +1,9 @@
 
 <md-toolbar class="md-warn">
-    <div class="md-toolbar-tools">
+    <div class="md-toolbar-tools" layout="row">
         <md-button class="md-raised md-primary" ng-click="changeLanguage('en')">{{'BUTTON_LANG_EN' |translate}}</md-button>
         <md-button class="md-raised md-primary" ng-click="changeLanguage('ro')">{{'BUTTON_LANG_RO' |translate}}</md-button>
+        <a ng-href="/" ng-if="'web.view2' | isState">{{'Go to your list of cars' | translate}}</a>
     </div>
+
 </md-toolbar>

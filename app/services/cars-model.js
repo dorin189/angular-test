@@ -2,15 +2,16 @@
 angular.module('myApp.cars',[
 
 ])
-    .service('CarsModel', function ($translate, $http) {
-
+    .service('CarsModel', function ($http) {
         var model = this,
-            URL = {
-               FETCH: 'data/cars.json'
+            URLS = {
+               FETCH: '/data/cars.json'
             },
             cars;
 
         model.getCars = function () {
-            return $http.get(URL.fetch);
-        };
+            return $http.get(URLS.FETCH);
+        }
+
+
     });

@@ -8,6 +8,10 @@
   "Wiki url": "Wiki url",
   "Image url": "Image url",
   "Description": "Description",
-  "BUTTON_LANG_RO": "Romain",
-  "BUTTON_LANG_EN": "English"
+  "BUTTON_LANG_RO": "Romanian",
+  "BUTTON_LANG_EN": "English",
+  "Go to your list of cars": "Go to your list of cars",
+  "Add a new car": "Add a new car",
+  "Add data for new car": "Add data for new car",
+  "Save": "Save"
 }

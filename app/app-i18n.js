@@ -15,22 +15,22 @@ angular.module('myApp.i18n',[])
 
         $translateProvider.fallbackLanguage('en');
 
-        // remember language
+        // remember menu
         $translateProvider.useLocalStorage();
         $translateProvider.useSanitizeValueStrategy(null);
-    }])
+    }]);
 
-.controller('MainCtrl', ['$translate', '$scope','$http', function ($translate, $scope, $http) {
-
-    $scope.changeLanguage = function (langKey) {
-        $translate.use(langKey);
-        console.log("ok");
-    };
-
-    $http.get('data/cars.json')
-        .then(function (res) {
-            $scope.todos = res.data;
-        });
-}]);
+// .controller('MainCtrl', ['$translate', '$scope','$http', function ($translate, $scope, $http) {
+//
+//     $scope.changeLanguage = function (langKey) {
+//         $translate.use(langKey);
+//         console.log("ok");
+//     };
+//
+//     $http.get('data/cars.json')
+//         .then(function (res) {
+//             $scope.todos = res.data;
+//         });
+// }]);
 
 

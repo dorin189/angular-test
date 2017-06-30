@@ -9,5 +9,9 @@
   "Image url": "Adresa imaginii",
   "Description": "Descriere",
   "BUTTON_LANG_RO": "Romana",
-  "BUTTON_LANG_EN": "Engleza"
+  "BUTTON_LANG_EN": "Engleza",
+  "Go to your list of cars": "Vezi lista de masina",
+  "Add a new car": "Adauga o noua masina",
+  "Add data for new car": "Adauga informatii despre noua masina",
+  "Save": "Salveaza"
 }

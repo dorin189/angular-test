@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.view2', [])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view2', {
-    templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
+  .controller('View2Ctrl', function (CarsModel, $stateParams) {
+      var view2Ctrl = this;
+      view2Ctrl.obiect = $stateParams.id;
+
+      CarsModel.getCars()
+          .then(function (result) {
+              view2Ctrl.car = result.data[view2Ctrl.obiect-1];
+          });
+
   });
-}])
-
-.controller('View2Ctrl', [function() {
-
-}]);

@@ -1,9 +1,9 @@
-(function(){
+(function () {
     'use strict';
 })();
 
-angular.module('myApp.routes',[])
-    .config(['$locationProvider', '$routeProvider', '$stateProvider', '$urlRouterProvider', function ($locationProvider, $routeProvider, $stateProvider, $urlRouterProvider) {
+angular.module('myApp.routes', [])
+    .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function ($locationProvider, $stateProvider, $urlRouterProvider) {
         $locationProvider.hashPrefix('');
 
         $stateProvider
@@ -16,14 +16,33 @@ angular.module('myApp.routes',[])
                 url: '/',
                 views: {
                     'cars@': {
-                        controller: 'View1Ctrl',
-                        templateUrl: 'views/view1/view1.html',
+                        controller: 'ViewCtrl as viewCtrl',
+                        templateUrl: 'views/view1/view1.html'
 
                     }
-
                 }
+            })
 
+            .state('web.view2', {
+                url: '/car/{id}',
+                views: {
+                    'car@': {
+                        controller: 'View2Ctrl as view2Ctrl',
+                        templateUrl: 'views/view2/view2.html'
+                    }
+                }
+            })
+
+
+            .state('web.view3', {
+                url: '/add',
+                views: {
+                    'add@': {
+                        controller: 'View3Ctrl as view3Ctrl',
+                        templateUrl: 'views/view3/view3.html'
+                    }
+                }
             });
 
         $urlRouterProvider.otherwise('/');
-}]);
+    }]);

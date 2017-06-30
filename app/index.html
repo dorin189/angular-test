@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-  <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <base href="/">
 </head>
 
 <body>
 
-<hero-detail></hero-detail>
+<menu-selector></menu-selector>
 <h3 layout-padding>{{'HEADLINE' | translate}}</h3>
-  <div ng-controller="View1Ctrl">
-    <div ui-view="cars">
-
-    </div>
-
-  </div>
+<div ui-view="cars"></div>
+<div ui-view="car"></div>
 
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-  <script src="bower_components/angular-material/angular-material.min.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.js"></script>
@@ -46,13 +48,24 @@
 <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-static-files/2.15.2/angular-translate-loader-static-files.js"></script>
 <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-handler-log/2.15.2/angular-translate-handler-log.js"></script>
 
-  <script src="app.js"></script>
-  <script src="app-routes.js"></script>
-  <script src="views/view1/view1.js"></script>
-  <script src="views/view2/view2.js"></script>
-  <script src="views/view3/view3.js"></script>
-  <script src="app-i18n.js"></script>
-  <script src="components/language/language.js"></script>
+<script src="app.js"></script>
+<script src="app-routes.js"></script>
+
+<script src="components/menu/menu.js"></script>
+<script src="components/menu/menu-controller.js"></script>
+<script src="components/view1/all-cards/all-cards.js"></script>
+<script src="components/view1/card-all-data/card-all-data.js"></script>
+<script src="components/view2/car-information.js"></script>
+<script src="components/view3/add-new-car.js"></script>
+
 <script src="services/cars-model.js"></script>
+<script src="services/add-car.js"></script>
+
+<script src="views/view1/view1.js"></script>
+<script src="views/view2/view2.js"></script>
+<script src="views/view3/view3.js"></script>
+
+<script src="app-i18n.js"></script>
+
 </body>
 </html>
