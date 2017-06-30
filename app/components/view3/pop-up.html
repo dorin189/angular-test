@@ -1,0 +1,44 @@
+<md-dialog style="width: 400px">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>{{'Add data for new car' | translate}}</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content layout-padding>
+        <form name="addForm" role="form" novalidate ng-submit="addForm.$valid && createCar(newCar)">
+            <md-input-container class="md-block">
+                <label>{{'Title' | translate}}</label>
+                <input required name="title" ng-model="newCar.title">
+
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>{{'Price' | translate}}</label>
+                <input ng-model="newCar.price" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>{{'Wiki url' | translate}}</label>
+                <input ng-model="newCar.wiki" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>{{'Image url' | translate}}</label>
+                <input ng-model="newCar.img" required>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>{{'Description' | translate}}</label>
+                <input ng-model="newCar.description" required>
+            </md-input-container>
+
+            <div>
+                <md-button class="md-raised md-primary" type="submit">{{'Save' |translate}}</md-button>
+            </div>
+
+        </form>
+        <li ng-repeat="masina in masini">
+            <ul> {{masina.title}}</ul>
+           </li>
+
+    </md-dialog-content>
+</md-dialog>

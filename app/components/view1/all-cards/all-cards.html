@@ -16,10 +16,10 @@
 
                 <div class="md-padding"><a href="{{car.wiki}}" target="_blank">{{'Wiki url' | translate}} : {{car.wiki}}</a></div>
                 <md-card-actions layout="row" layout-align="end center">
-                    <md-button style="color: darkgoldenrod" ng-click="viewMore(car.id)">{{'View more' | translate}}</md-button>
+                    <md-button style="color: darkgoldenrod" ng-click="viewMore(car)" ng-show="car.id <= 5">{{'View more' | translate}}</md-button>
                     <md-button class="md-accent" ng-click="removeItem(car)">{{'Delete' | translate}}</md-button>
                 </md-card-actions>
-
+                <p ng-show="car.id > 5" layout-padding>{{car.description}}</p>
             </md-card>
         </div>
     </md-content>

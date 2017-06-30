@@ -10,6 +10,7 @@ angular.module('myApp', [
     'myApp.carInfo',
     'myApp.view3',
     'myApp.add',
+    'myApp.add-car-service',
     'myApp.language',
     'myApp.language2',
     'ngCookies',

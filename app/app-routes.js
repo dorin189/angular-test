@@ -24,7 +24,7 @@ angular.module('myApp.routes', [])
             })
 
             .state('web.view2', {
-                url: '/car/{id}',
+                url: '/car/{carId}',
                 views: {
                     'car@': {
                         controller: 'View2Ctrl as view2Ctrl',
@@ -38,8 +38,7 @@ angular.module('myApp.routes', [])
                 url: '/add',
                 views: {
                     'add@': {
-                        controller: 'View3Ctrl as view3Ctrl',
-                        templateUrl: 'views/view3/view3.html'
+                        controller: 'View3Ctrl as view3Ctrl'
                     }
                 }
             });

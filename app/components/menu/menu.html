@@ -3,6 +3,7 @@
     <div class="md-toolbar-tools" layout="row">
         <md-button class="md-raised md-primary" ng-click="changeLanguage('en')">{{'BUTTON_LANG_EN' |translate}}</md-button>
         <md-button class="md-raised md-primary" ng-click="changeLanguage('ro')">{{'BUTTON_LANG_RO' |translate}}</md-button>
+        <add-car ng-if="'web.view1' | isState"></add-car>
         <a ng-href="/" ng-if="'web.view2' | isState">{{'Go to your list of cars' | translate}}</a>
     </div>
 
